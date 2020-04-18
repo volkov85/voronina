@@ -12,13 +12,13 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.2.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^6.1.1",
-    "gulp-modernizr": "^3.3.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-modernizr": "^3.4.1",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
@@ -27,7 +27,7 @@
     "gulp-webp": "^4.0.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
-    "readable-stream": "^3.4.0",
+    "readable-stream": "^3.6.0",
     "scss-resets": "^0.5.2"
   }
 }

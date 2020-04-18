@@ -96,13 +96,16 @@ exports.img = function () {
 };
 
 // Генерация файлов изображений в формате *.webp
-exports.webp = function () {
+function webpb() {
   return src(`source/img/*.{png,jpg}`)
     .pipe(webp({
-      quality: 90
+      quality: 75,
+      alphaQuality: 75,
+      method: 6
     }))
     .pipe(dest(`build/img`));
-};
+}
+exports.webpb = webpb;
 
 // Удаление файлов в папке build перед копированием
 function clean() {
@@ -149,12 +152,12 @@ exports.refresh = refresh;
 // Создание сборки проекта
 exports.build = series(
   clean,
-  parallel(copy, css, js, html)
+  parallel(copy, css, js, html, webpb)
 );
 
 // Создание сборки проекта и запуск сервера Browsersync
 exports.start = series(
   clean,
-  parallel(copy, css, js, html),
+  parallel(copy, css, js, html, webpb),
   server
 );
