@@ -1,0 +1,238 @@
+.footer {
+  padding-bottom: 65px;
+
+  @media (min-width: 680px) {
+    padding-top: 68px;
+    padding-bottom: 50px;
+    background: calc(50% + 4px) top no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/footer_bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/footer_bg-tablet.webp");
+    }
+  }
+
+  @media (min-width: 1180px) {
+    padding-top: 114px;
+    padding-bottom: 173px;
+    background-position: calc(50% - 7px) -9px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/footer_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/footer_bg-desktop.webp");
+    }
+  }
+}
+
+.footer__inner {
+  @extend %container;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  @media (min-width: 680px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: 1180px) {
+    padding-right: 37px;
+    padding-left: 37px;
+  }
+}
+
+.footer__title {
+  @extend %title;
+  margin-bottom: 18px;
+  padding-top: 56px;
+  padding-bottom: 20px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 54px;
+    padding-top: 104px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 103px;
+    padding-top: 135px;
+    padding-bottom: 0;
+  }
+
+  &::before {
+    font-size: $fontSizeTitleDesktop;
+    letter-spacing: $letterSpacingLarge;
+    opacity: 0.4;
+
+    @media (min-width: 680px) {
+      font-size: $fontSizeBackgroundTablet;
+    }
+
+    @media (min-width: 1180px) {
+      top: 208px;
+      font-size: $fontSizeBackgroundFooter;
+    }
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 38px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: 1180px) {
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 69px;
+  }
+}
+
+.footer__contacts-item {
+  margin-top: 0;
+  margin-bottom: 21px;
+  font-weight: $fontWeightSemiBold;
+  color: $colorTextFooter;
+  letter-spacing: $letterSpacing;
+
+  @media (min-width: 680px) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 0;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 81px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & > span {
+    position: relative;
+    padding-right: 32px;
+
+    &::after {
+      content: "///";
+      position: absolute;
+      top: -4px;
+      right: 4px;
+      font-size: $fontSizeTextDesktop;
+      color: $colorPrimaryLight;
+    }
+
+    @media (min-width: 680px) {
+      padding-right: 56px;
+
+      &::after {
+        top: -1px;
+        right: 12px;
+      }
+    }
+
+    @media (min-width: 1180px) {
+      padding-right: 33px;
+
+      &::after {
+        top: 0;
+        right: 5px;
+      }
+    }
+  }
+
+  a {
+    color: inherit;
+    transition: opacity 0.2s;
+
+    &[href^="tel"] {
+      letter-spacing: normal;
+
+      span {
+        letter-spacing: $letterSpacing;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.footer__social {
+  @extend %list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 184px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 680px) {
+    width: 196px;
+  }
+}
+
+.footer__social-item {
+  margin-bottom: 20px;
+
+  &:not(:nth-child(4n)):not(:last-child) {
+    margin-right: 26px;
+
+    @media (min-width: 680px) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.footer__social-link {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: opacity 0.2s;
+
+  @media (min-width: 680px) {
+    width: 34px;
+    height: 34px;
+  }
+
+  @each $social in fb, insta, vk, pin {
+    &--#{$social} {
+      background-image: url("../img/footer_icon-#{$social}.svg");
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

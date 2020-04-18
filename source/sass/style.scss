@@ -1,0 +1,15 @@
+@import "normalize";
+@import "misc/variables";
+@import "misc/functions";
+@import "misc/mixins";
+@import "misc/fonts";
+@import "misc/extends", "misc/animations", "blocks/visually-hidden";
+@import "misc/base", "blocks/page", "blocks/button";
+@import "blocks/header", "blocks/logo", "blocks/menu", "blocks/menu-mobile";
+@import "blocks/hero", "blocks/social";
+@import "blocks/works", "blocks/work";
+@import "blocks/portfolio";
+@import "blocks/about";
+@import "blocks/price";
+@import "blocks/footer";
+@import "blocks/pagination";

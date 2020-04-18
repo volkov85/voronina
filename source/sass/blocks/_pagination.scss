@@ -1,0 +1,87 @@
+.pagination {
+  @extend %list-reset;
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  display: none;
+  transform: translateY(-50%);
+
+  @media (min-width: 1294px) {
+    display: block;
+    transition: left 0.5s;
+  }
+
+  @media (min-width: 1440px) {
+    left: calc(50% - 700px);
+  }
+
+  &--right {
+    @media (min-width: 1356px) {
+      left: calc(50% - 658px);
+    }
+  }
+}
+
+.pagination__item {
+  width: 37px;
+}
+
+.pagination__link {
+  position: relative;
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  font: oblique $fontWeightLight #{$fontSizeTextMobile}/#{$lineHeightNormal} $fontFamilyPagination;
+  text-align: center;
+  color: transparent;
+
+  .no-js & {
+    color: inherit;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 26px;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    color: $colorGrayLight;
+    background-color: currentColor;
+    transition-duration: 0.2s, 0.5s, 0.5s;
+    transition-property: color, right, left;
+
+    .pagination--right & {
+      right: 0;
+      left: 26px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::after {
+      color: $colorGrayXDark;
+    }
+  }
+
+  &--active {
+    margin-top: 12px;
+    color: inherit;
+
+    &::after {
+      right: 0;
+      height: 2px;
+      color: $colorBlack;
+
+      .pagination--right & {
+        left: 0;
+      }
+    }
+  }
+
+  .pagination__item:first-child & {
+    margin-top: 0;
+  }
+}

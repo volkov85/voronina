@@ -1,0 +1,9 @@
+@include font-face("Source Serif Pro", "Light", $fontWeightLight);
+@include font-face("Source Serif Pro", "Regular");
+@include font-face("Source Serif Pro", "Semibold", $fontWeightSemiBold);
+@include font-face("Source Serif Pro", "Bold", $fontWeightBold);
+@include font-face("Myriad Pro", "Bold", $fontWeightBold, $woff2: false);
+
+@media (min-width: 1294px) {
+  @include font-face("Lato", "Light", $fontWeightLight);
+}

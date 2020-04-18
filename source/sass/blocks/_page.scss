@@ -1,0 +1,101 @@
+.page {
+  min-width: 320px;
+  margin: 0;
+  font: #{$fontSizeTextMobile}/#{$lineHeightNormal} $fontFamilyText;
+  color: $colorText;
+  background: no-repeat $colorWhite;
+
+  @media (min-width: 680px) {
+    font-size: $fontSizeTextTablet;
+    background-position: center -1769px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/bg-tablet.webp");
+    }
+  }
+
+  @media (min-width: 1180px) {
+    font-size: $fontSizeTextDesktop;
+    background-position: center 169px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/bg-desktop.webp");
+    }
+  }
+}
+
+.page__header {
+  position: absolute;
+  z-index: 2;
+}
+
+.page__hero {
+  margin-bottom: 80px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 154px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 140px;
+  }
+}
+
+.page__works {
+  margin-bottom: 55px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 107px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 53px;
+  }
+}
+
+.page__portfolio {
+  position: relative;
+  margin-bottom: 80px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 129px;
+  }
+}
+
+.page__about {
+  margin-bottom: 79px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 58px;
+  }
+}
+
+.page__price {
+  margin-bottom: 71px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 144px;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,16 @@
+.logo {
+  flex-shrink: 0;
+  width: 112px;
+
+  @media (min-width: 680px) {
+    width: 201px;
+  }
+
+  @media (min-width: 1180px) {
+    width: 254px;
+  }
+
+  img {
+    display: block;
+  }
+}

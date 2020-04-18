@@ -1,0 +1,229 @@
+.portfolio {
+  min-height: 298px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  @media (min-width: 680px) {
+    min-height: 371px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: calc(50% - 126px) top no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/portfolio_bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/portfolio_bg-tablet.webp");
+    }
+  }
+
+  @media (min-width: 1180px) {
+    min-height: 506px;
+    background-position: calc(50% - 70px) top;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/portfolio_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/portfolio_bg-desktop.webp");
+    }
+  }
+}
+
+.portfolio__inner {
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 680px) {
+    position: relative;
+    width: 640px;
+  }
+
+  @media (min-width: 1180px) {
+    width: 1106px;
+  }
+}
+
+.portfolio__image {
+  position: absolute;
+  top: 45px;
+  right: 50%;
+  width: 320px;
+  transform: translateX(50%);
+
+  @media (min-width: 680px) {
+    top: 63px;
+    right: auto;
+    left: -224px;
+    width: 423px;
+    transform: none;
+  }
+
+  @media (min-width: 1180px) {
+    top: 86px;
+    left: -167px;
+    width: 611px;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.portfolio__content {
+  box-sizing: border-box;
+  min-height: 298px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 74px 40px 25px 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 298px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background:
+      calc(50% + 2px) top no-repeat,
+      content-box rgba($colorBlack, 0.5);
+
+    .no-js &,
+    .no-webp & {
+      background-image:
+        url("../img/portfolio_border-mobile.png"),
+        none;
+    }
+
+    .webp & {
+      background-image:
+        url("../img/portfolio_border-mobile.webp"),
+        none;
+    }
+  }
+
+  @media (min-width: 680px) {
+    min-height: 371px;
+    padding: 99px 35px 35px 214px;
+
+    &::before {
+      content: none;
+
+      .no-js &,
+      .no-webp &,
+      .webp & {
+        background: none;
+      }
+    }
+  }
+
+  @media (min-width: 1180px) {
+    min-height: 506px;
+    padding: 142px 184px 40px 474px;
+  }
+}
+
+.portfolio__title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 6px;
+  font-weight: $fontWeightSemiBold;
+  font-size: $fontSizeTextDesktop;
+  color: $colorWhite;
+
+  @media (min-width: 680px) {
+    margin-bottom: 16px;
+    padding-left: 7px;
+    font-size: $fontSizeTitleTablet;
+    color: $colorText;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 19px;
+    padding-left: 0;
+  }
+}
+
+.portfolio__text {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 32px;
+  padding-left: 6px;
+  color: $colorWhite;
+
+  @media (min-width: 680px) {
+    width: 273px;
+    margin-bottom: 28px;
+    padding-left: 7px;
+    color: $colorText;
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 41px;
+    padding-left: 0;
+  }
+}
+
+.portfolio__button {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -39px;
+    width: 24px;
+    height: 27px;
+    background: center no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/portfolio_icon-pdf-mobile.png");
+    }
+
+    .webp & {
+      background-image: url("../img/portfolio_icon-pdf-mobile.webp");
+    }
+
+    @media (min-width: 680px) {
+      top: -3px;
+      right: -57px;
+      width: 32px;
+      height: 36px;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/portfolio_icon-pdf-tablet.png");
+      }
+
+      .webp & {
+        background-image: url("../img/portfolio_icon-pdf-tablet.webp");
+      }
+    }
+
+    @media (min-width: 1180px) {
+      top: 0;
+      right: -51px;
+      width: 24px;
+      height: 28px;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/portfolio_icon-pdf-desktop.png");
+      }
+
+      .webp & {
+        background-image: url("../img/portfolio_icon-pdf-desktop.webp");
+      }
+    }
+  }
+}

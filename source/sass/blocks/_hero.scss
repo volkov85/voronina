@@ -1,0 +1,229 @@
+.hero {
+  min-height: 480px;
+  background: no-repeat $colorBackground;
+
+  @media (min-width: 680px) {
+    min-height: 823px;
+    background-position:
+      calc(50% + 478px) 100px,
+      calc(50% + 304px) top;
+
+    .no-js &,
+    .no-webp & {
+      background-image:
+        url("../img/hero_border-tablet.png"),
+        url("../img/hero_bg-tablet.jpg");
+    }
+
+    .webp & {
+      background-image:
+        url("../img/hero_border-tablet.webp"),
+        url("../img/hero_bg-tablet.webp");
+    }
+  }
+
+  @media (min-width: 1180px) {
+    min-height: 780px;
+    background-position:
+      calc(50% + 347px) 100px,
+      calc(50% + 417px) top;
+
+    .no-js &,
+    .no-webp & {
+      background-image:
+        url("../img/hero_border-desktop.png"),
+        url("../img/hero_bg-desktop.jpg");
+    }
+
+    .webp & {
+      background-image:
+        url("../img/hero_border-desktop.webp"),
+        url("../img/hero_bg-desktop.webp");
+    }
+  }
+}
+
+.hero__inner {
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 680px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 92%;
+    padding-top: 162px;
+  }
+
+  @media (min-width: 1180px) {
+    justify-content: flex-end;
+    width: auto;
+    max-width: 1180px;
+    padding-top: 159px;
+  }
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 320px;
+  transform: translateX(50%);
+
+  @media (min-width: 680px) {
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: 1;
+    width: 327px;
+    transform: none;
+  }
+
+  @media (min-width: 1180px) {
+    width: 348px;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.hero__column {
+  @media (min-width: 680px) {
+    display: flex;
+    flex-direction: column;
+    width: 316px;
+    height: 589px;
+  }
+
+  @media (min-width: 1180px) {
+    width: 427px;
+    height: 591px;
+    margin-right: 103px;
+  }
+}
+
+.hero__content {
+  box-sizing: border-box;
+  min-height: 480px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 185px 50px 70px 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 480px;
+    background: calc(50% - 28px) 105px no-repeat rgba($colorBlack, 0.4);
+    border-radius: 2px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/hero_border-mobile.png");
+    }
+
+    .webp & {
+      background-image: url("../img/hero_border-mobile.webp");
+    }
+  }
+
+  @media (min-width: 680px) {
+    min-height: auto;
+    padding: 20px 15px 60px 11px;
+
+    &::before {
+      content: none;
+
+      .no-js &,
+      .no-webp &,
+      .webp & {
+        background: none;
+      }
+    }
+  }
+
+  @media (min-width: 1180px) {
+    padding: 20px 20px 115px 24px;
+  }
+}
+
+.hero__title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: $fontWeightSemiBold;
+  font-size: $fontSizeTitleRegular;
+  color: $colorWhiteDark;
+
+  @media (min-width: 680px) {
+    margin-bottom: 33px;
+    font-size: $fontSizeTitleDesktop;
+    color: $colorText;
+
+    &::before,
+    &::after {
+      position: absolute;
+      font-size: $fontSizeTitleLarge;
+      color: $colorWhiteDark;
+    }
+
+    &::before {
+      content: attr(data-bg-text1);
+      top: -18px;
+      left: -42px;
+    }
+
+    &::after {
+      content: attr(data-bg-text2);
+      top: 13px;
+      right: -29px;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    margin-bottom: 26px;
+    font-size: $fontSizeTitleLarge;
+
+    &::before {
+      top: -40px;
+      left: -32px;
+      font-size: $fontSizeBackgroundHeroLarge;
+    }
+
+    &::after {
+      top: 22px;
+      right: -82px;
+      font-size: $fontSizeBackgroundHero;
+    }
+  }
+}
+
+.hero__text {
+  position: relative;
+  width: 235px;
+  margin-top: 0;
+  margin-bottom: 37px;
+  font-weight: $fontWeightLight;
+  color: $colorWhite;
+
+  @media (min-width: 680px) {
+    width: 270px;
+    color: $colorText;
+  }
+
+  @media (min-width: 1180px) {
+    width: 300px;
+    margin-bottom: 36px;
+  }
+}
