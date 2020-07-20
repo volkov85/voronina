@@ -6,9 +6,9 @@
     "deploy": "gh-pages -d build -m \"Сделал сборку сайта\"",
     "start": "gulp start"
   },
-  "repository": "github:koshikishi/voronina",
+  "repository": "github:volkov85/voronina",
   "license": "ISC",
-  "homepage": "https://koshikishi.github.io/voronina",
+  "homepage": "https://volkov85.github.io/voronina/",
   "devDependencies": {
     "browser-sync": "^2.26.10",
     "del": "^5.1.0",
