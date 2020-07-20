@@ -10,7 +10,7 @@
   "license": "ISC",
   "homepage": "https://koshikishi.github.io/voronina",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.10",
     "del": "^5.1.0",
     "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
@@ -21,7 +21,7 @@
     "gulp-modernizr": "^3.4.1",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
